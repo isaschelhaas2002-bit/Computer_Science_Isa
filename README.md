@@ -17,7 +17,7 @@ NUM_HASHES   = 120
 Q_GRAM       = 3
 SAVE_PLOTS   = True
 
-# LSH banding settings (bands * rows = NUM_HASHES)
+# LSH banding settings 
 LSH_SETTINGS = [
     {"bands": 60, "rows": 2},
     {"bands": 40, "rows": 3},
