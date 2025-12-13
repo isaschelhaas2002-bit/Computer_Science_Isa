@@ -1,3 +1,9 @@
+This repository contains the code for detecting duplicates across different Web shops. The method used for this is a combination of MSM and LSH, where the products are hashed based on the following set of characteristics: brand token, model words, and tokens from the title. The code first cleans the data, after which products are hashed to buckets, and several candidate pairs are removed based on two additional criteria. Then, the products are compared using Jaccard similarity, after which products are classified duplicates or not. This method is compared with the baseline MSM method, using several different performance metrics. Plots are made to show the difference. 
+
+For using the code, a zip file containing TVs needs to be uploaded. For final performance review, bootstrapping is applied, where in each of the five boostraps 63% of the data is used as training data, and 37% as test data. 
+
+
+
 import json, zipfile, os, re, time, random
 from collections import defaultdict, Counter
 from itertools import combinations
